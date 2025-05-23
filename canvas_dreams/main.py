@@ -3,9 +3,16 @@ import sys
 import random
 import math
 from pygame import gfxdraw
+import os
 
-# Initialize Pygame
-pygame.init()
+# Disable audio to prevent ALSA errors
+os.environ['SDL_AUDIODRIVER'] = 'dummy'
+
+# Initialize Pygame with specific subsystems, excluding audio
+pygame.display.init()
+pygame.font.init()
+pygame.key.init()
+pygame.mouse.init()
 
 # Constants
 WIDTH, HEIGHT = 800, 600
