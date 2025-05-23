@@ -1,135 +1,209 @@
-# Building Games with Amazon Q CLI
-
-This project demonstrates how Amazon Q CLI can help you build creative applications like games. In this example, we've created "Canvas Dreams" - an interactive art creation game using Pygame, with both desktop and web versions.
+# Canvas Dreams - Trò chơi sáng tạo nghệ thuật
 
 ![Canvas Dreams](https://placeholder-for-screenshot.png)
 
-## How Amazon Q Helped
+Canvas Dreams là một trò chơi sáng tạo nghệ thuật tương tác cho phép người dùng tạo ra các tác phẩm nghệ thuật kỹ thuật số đẹp mắt. Với nhiều chế độ vẽ, hiệu ứng hạt và công cụ tùy chỉnh, Canvas Dreams mang đến trải nghiệm sáng tạo thú vị cho mọi người.
 
-Amazon Q CLI assisted in:
+## Tính năng nổi bật
 
-1. **Project Setup**: Created the project structure and virtual environment
-2. **Dependency Management**: Installed and configured Pygame and Flask
-3. **Code Generation**: Created the game code with multiple drawing modes and features
-4. **UI Design**: Built an intuitive user interface with sidebar, buttons, and controls
-5. **Web Conversion**: Transformed the Pygame application into a web application
-6. **Documentation**: Generated comprehensive README files and instructions
-7. **Troubleshooting**: Fixed audio initialization issues for environments without sound hardware
+### Giao diện chuyên nghiệp
+- **Thanh bên (Sidebar)**: Chứa tất cả các điều khiển và tùy chọn
+- **Khu vực vẽ**: Được phân tách rõ ràng với viền
+- **Bảng màu**: Nằm ở phía dưới để dễ dàng chọn màu
+- **Hệ thống trợ giúp**: Hiển thị hướng dẫn chi tiết khi cần
 
-## Canvas Dreams Game
+### Đa dạng chế độ vẽ
+- **Vẽ thông thường**: Vẽ nét cơ bản với độ chính xác cao
+- **Phun sơn**: Tạo hiệu ứng phun mềm mại với hệ thống hạt
+- **Kaleidoscope**: Tạo các mẫu đối xứng tuyệt đẹp tự động
+- **Trọng lực**: Tạo hiệu ứng phun nước với vật lý hấp dẫn
 
-Canvas Dreams is an interactive art creation game with a modern UI that allows users to:
+### Tùy chỉnh linh hoạt
+- Điều chỉnh kích thước bút vẽ
+- Bảng màu phong phú
+- Điều chỉnh mức độ đối xứng cho chế độ kaleidoscope
+- Chuyển đổi giữa nền đen và nền trắng
 
-### Features
-- **Professional Interface**: Sidebar with controls, dedicated canvas area, and color palette
-- **Multiple Drawing Modes**: Standard drawing, spray paint, kaleidoscope patterns, and gravity effects
-- **Customization Options**: Adjustable brush sizes, symmetry levels, and background colors
-- **Interactive Controls**: Both button-based UI and keyboard shortcuts
-- **Help System**: Built-in help overlay with instructions
-- **Artwork Saving**: Save your creations as PNG files
-- **Multiple Platforms**: Available as both desktop application and web application
+### Hai phiên bản
+- **Phiên bản Desktop**: Sử dụng Pygame, chạy như ứng dụng độc lập
+- **Phiên bản Web**: Sử dụng HTML5 Canvas, chạy trên trình duyệt web
 
-### Technical Highlights
-- Particle systems with physics simulation
-- Symmetrical pattern generation algorithms
-- Interactive UI with button components
-- Color manipulation and blending effects
-- Canvas isolation for clean exports
-- Web implementation using HTML5 Canvas and JavaScript
+## Cài đặt
 
-## Installation
-
-### Prerequisites
+### Yêu cầu hệ thống
 - Python 3.x
-- Pygame library (for desktop version)
-- Flask (for web version)
+- Pygame (cho phiên bản desktop)
+- Flask và Werkzeug (cho phiên bản web)
 
-### Setup
-1. Clone this repository:
+### Các bước cài đặt
+1. Clone repository này:
    ```
    git clone https://github.com/vanhoangkha/Build-Games-with-Amazon-Q-CLI.git
    ```
-2. Create a virtual environment and install dependencies:
+
+2. Di chuyển vào thư mục dự án:
    ```
    cd Build-Games-with-Amazon-Q-CLI
+   ```
+
+3. Tạo môi trường ảo và kích hoạt:
+   ```
    python3 -m venv venv
    source venv/bin/activate
-   pip install pygame flask
    ```
 
-## Running the Game
+4. Cài đặt các thư viện cần thiết:
+   ```
+   pip install pygame
+   ```
 
-### Desktop Version
-To run the desktop version:
+   Đối với phiên bản web, cài đặt thêm:
+   ```
+   pip install flask==2.0.1 werkzeug==2.0.1
+   ```
 
-1. Navigate to the canvas_dreams directory
-2. Execute the run.sh script:
+## Cách chạy trò chơi
+
+### Phiên bản Desktop
+1. Di chuyển vào thư mục canvas_dreams:
    ```
    cd canvas_dreams
+   ```
+
+2. Chạy script run.sh:
+   ```
    ./run.sh
    ```
 
-### Web Version
-To run the web version:
+   Hoặc chạy trực tiếp:
+   ```
+   python main.py
+   ```
 
-1. Navigate to the canvas_dreams_web directory
-2. Execute the run.sh script:
+### Phiên bản Web
+1. Di chuyển vào thư mục canvas_dreams_web:
    ```
    cd canvas_dreams_web
+   ```
+
+2. Cài đặt các thư viện cần thiết:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Chạy script run.sh:
+   ```
    ./run.sh
    ```
-3. Open your web browser and go to:
+
+   Hoặc chạy trực tiếp:
+   ```
+   python server.py
+   ```
+
+4. Mở trình duyệt web và truy cập:
    ```
    http://localhost:1313
    ```
 
-## Game Controls
+## Hướng dẫn sử dụng
 
-### Mouse Controls
-- **Left Mouse Button**: Draw on canvas
-- **Right Mouse Button**: Change to a random color
-- **Click on Color Palette**: Select specific colors
-- **Click on Buttons**: Activate various functions
+### Điều khiển chuột
+- **Chuột trái**: Vẽ trên canvas
+- **Chuột phải**: Đổi sang màu ngẫu nhiên
+- **Nhấp vào bảng màu**: Chọn màu cụ thể
+- **Nhấp vào các nút**: Kích hoạt các chức năng
 
-### Keyboard Shortcuts
-- **1-4 Keys**: Switch between drawing modes
-- **Up/Down Arrows**: Increase/decrease brush size
-- **Left/Right Arrows**: Decrease/increase symmetry (in kaleidoscope mode)
-- **C Key**: Clear the canvas
-- **S Key**: Save your artwork
-- **B Key**: Toggle background color (black/white)
-- **H Key**: Show/hide help overlay
+### Phím tắt
+| Phím | Chức năng |
+|------|-----------|
+| 1-4 | Chuyển đổi giữa các chế độ vẽ |
+| Mũi tên Lên/Xuống | Tăng/giảm kích thước bút |
+| Mũi tên Trái/Phải | Điều chỉnh mức độ đối xứng (trong chế độ kaleidoscope) |
+| C | Xóa canvas |
+| S | Lưu tác phẩm dưới dạng PNG |
+| B | Chuyển đổi màu nền (đen/trắng) |
+| H | Hiển thị/ẩn trợ giúp |
 
-## Interface Elements
+### Các chế độ vẽ
+1. **Vẽ thông thường (phím 1)**: Chế độ vẽ cơ bản với nét vẽ liên tục
+2. **Phun sơn (phím 2)**: Tạo hiệu ứng phun với các hạt nhỏ
+3. **Kaleidoscope (phím 3)**: Tạo các mẫu đối xứng xung quanh tâm canvas
+4. **Trọng lực (phím 4)**: Tạo hiệu ứng phun nước với các hạt chịu tác động của trọng lực
 
-- **Sidebar**: Contains all controls and mode selections
-- **Canvas Area**: The main drawing space
-- **Color Palette**: Located at the bottom for easy color selection
-- **Mode Buttons**: Select between different drawing styles
-- **Tool Buttons**: Access functions like clear, save, and help
-- **Size Controls**: Adjust brush size and symmetry levels
+## Mẹo sáng tạo
 
-## Development Journey
+- Kết hợp nhiều chế độ vẽ để tạo hiệu ứng độc đáo
+- Thử nghiệm với các mức độ đối xứng khác nhau trong chế độ kaleidoscope
+- Sử dụng kích thước bút khác nhau trong cùng một tác phẩm
+- Thử cả nền đen và nền trắng để tạo hiệu ứng tương phản
+- Lưu tác phẩm thường xuyên để xây dựng bộ sưu tập
 
-This project showcases how Amazon Q CLI can assist in creative application development:
+## Xử lý sự cố
 
-1. **Initial Concept**: Started with a basic idea for an art creation game
-2. **Core Implementation**: Built the fundamental drawing mechanics and particle systems
-3. **UI Enhancement**: Added a professional interface with controls and visual feedback
-4. **Web Adaptation**: Converted the Pygame application to a web-based version
-5. **Refinement**: Fixed issues and optimized for different environments
-6. **Documentation**: Created comprehensive guides and instructions
+### Phiên bản Desktop
+- **Lỗi âm thanh ALSA**: Đã được xử lý bằng cách tắt âm thanh trong mã nguồn
+- **Không hiển thị giao diện**: Kiểm tra cài đặt Pygame và môi trường Python
 
-## Future Enhancements
+### Phiên bản Web
+- **Lỗi ImportError với Flask**: Đảm bảo cài đặt đúng phiên bản Flask và Werkzeug
+  ```
+  pip install flask==2.0.1 werkzeug==2.0.1
+  ```
+- **Không thể truy cập localhost:1313**: Kiểm tra xem server đã chạy chưa và không có ứng dụng nào khác đang sử dụng cổng 1313
 
-Potential features for future development:
-- Animation recording capabilities
-- Additional drawing modes and effects
-- Layer system for complex artwork
-- Collaborative drawing features
-- Custom brush shapes and patterns
-- Mobile-friendly controls for the web version
+## Thông tin kỹ thuật
 
-## Enjoy Creating!
+### Công nghệ sử dụng
+- **Phiên bản Desktop**: Python, Pygame
+- **Phiên bản Web**: HTML5, CSS, JavaScript, Flask
 
-Let your imagination flow and create beautiful digital art with Canvas Dreams!
+### Cấu trúc dự án
+```
+Build-Games-with-Amazon-Q-CLI/
+├── canvas_dreams/           # Phiên bản desktop
+│   ├── main.py              # Mã nguồn chính
+│   ├── run.sh               # Script chạy game
+│   └── README.md            # Hướng dẫn
+│
+├── canvas_dreams_web/       # Phiên bản web
+│   ├── server.py            # Máy chủ Flask
+│   ├── requirements.txt     # Thư viện cần thiết
+│   ├── run.sh               # Script chạy server
+│   ├── templates/           # Mẫu HTML
+│   │   └── index.html
+│   ├── static/              # Tài nguyên tĩnh
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── canvas_dreams.js
+│   └── README.md            # Hướng dẫn
+│
+└── README.md                # Tài liệu chính
+```
+
+## Phát triển trong tương lai
+
+Các tính năng dự kiến phát triển:
+- Khả năng ghi lại hoạt ảnh
+- Thêm chế độ vẽ và hiệu ứng mới
+- Hệ thống lớp cho tác phẩm phức tạp
+- Tính năng vẽ cộng tác
+- Hình dạng bút tùy chỉnh
+- Tối ưu hóa cho thiết bị di động
+
+## Giới thiệu về dự án
+
+Canvas Dreams được phát triển để minh họa cách Amazon Q CLI có thể hỗ trợ trong việc xây dựng các ứng dụng sáng tạo. Dự án này là ví dụ về cách AI có thể giúp tạo ra các trò chơi tương tác với giao diện người dùng chuyên nghiệp và các tính năng phong phú.
+
+## Tác giả
+
+Dự án được phát triển với sự hỗ trợ của Amazon Q CLI.
+
+## Giấy phép
+
+Mã nguồn được cung cấp cho mục đích học tập và phi thương mại.
+
+## Hãy thỏa sức sáng tạo!
+
+Hãy để trí tưởng tượng của bạn bay bổng và tạo ra những tác phẩm nghệ thuật kỹ thuật số tuyệt đẹp với Canvas Dreams!
