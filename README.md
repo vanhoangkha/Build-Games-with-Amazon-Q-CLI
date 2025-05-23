@@ -1,6 +1,5 @@
 # Canvas Dreams - Interactive Art Creation Game
 
-![Canvas Dreams](https://placeholder-for-screenshot.png)
 
 Canvas Dreams is an interactive art creation game that allows users to create beautiful digital artwork. With multiple drawing modes, particle effects, and customization tools, Canvas Dreams offers an engaging creative experience for everyone.
 
