@@ -6,6 +6,12 @@ Canvas Dreams is an interactive art creation game that lets you express your cre
 
 ## Features
 
+### Modern User Interface
+- **Professional Layout**: Sidebar with controls, dedicated canvas area, and color palette footer
+- **Interactive Elements**: Buttons with hover effects and visual feedback
+- **Organized Controls**: Grouped by function for intuitive use
+- **Help System**: Built-in help overlay with comprehensive instructions
+
 ### Multiple Drawing Modes
 - **Standard Drawing**: Classic brush strokes for precise control
 - **Spray Paint**: Create soft, diffused effects with particle sprays
@@ -13,16 +19,16 @@ Canvas Dreams is an interactive art creation game that lets you express your cre
 - **Gravity Particles**: Create dynamic, flowing fountain effects with physics
 
 ### Customization Options
-- Adjustable brush sizes (use Up/Down arrow keys)
+- Adjustable brush sizes with visual indicator
 - Vibrant color palette with quick selection
-- Variable symmetry levels for kaleidoscope mode (use Left/Right arrow keys)
+- Variable symmetry levels for kaleidoscope mode
 - Toggle between dark and light backgrounds for different artistic styles
 
 ### Creative Tools
 - Particle system with realistic physics
 - Color variation for natural-looking effects
 - Canvas clearing for fresh starts
-- Artwork saving as PNG files
+- Artwork saving as PNG files with automatic naming
 
 ## Installation
 
@@ -51,16 +57,22 @@ python main.py
 
 ## Controls
 
-| Control | Action |
-|---------|--------|
-| Left Mouse Button | Draw on canvas |
-| Right Mouse Button | Change to random color |
-| Keys 1-4 | Switch drawing modes |
+### Mouse Controls
+- **Left Mouse Button**: Draw on canvas
+- **Right Mouse Button**: Change to a random color
+- **Click on Color Palette**: Select specific colors
+- **Click on Buttons**: Activate various functions
+
+### Keyboard Shortcuts
+| Key | Action |
+|-----|--------|
+| 1-4 | Switch drawing modes |
 | Up/Down Arrows | Increase/decrease brush size |
 | Left/Right Arrows | Adjust symmetry (in kaleidoscope mode) |
-| C Key | Clear canvas |
-| S Key | Save artwork as PNG |
-| B Key | Toggle background (black/white) |
+| C | Clear canvas |
+| S | Save artwork as PNG |
+| B | Toggle background (black/white) |
+| H | Show/hide help overlay |
 
 ## Examples of What You Can Create
 
