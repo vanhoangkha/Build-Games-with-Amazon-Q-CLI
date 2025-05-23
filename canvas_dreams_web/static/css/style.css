@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 60px;
+    overflow-y: auto;
+}
+
+.main-area {
+    margin-left: 200px;
+    height: calc(100vh - 60px);
+}
+
+#drawingCanvas {
+    border: 2px solid #ccc;
+    cursor: crosshair;
+}
+
+.footer {
+    height: 60px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #555;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    text-align: left;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+button.active {
+    background-color: #0066cc;
+}
+
+.size-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.size-btn {
+    width: 40px;
+    text-align: center;
+}
+
+.color-palette {
+    display: flex;
+    gap: 5px;
+}
+
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+
+.color-swatch.active {
+    border: 2px solid white;
+}
+
+#saveMessage {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.help-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-content {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.help-section {
+    margin-bottom: 20px;
+}
+
+.help-section h2 {
+    color: #0099ff;
+    margin-bottom: 10px;
+}
+
+.help-section p {
+    margin-bottom: 5px;
+}
+
+.help-close {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.hidden {
+    display: none;
+}

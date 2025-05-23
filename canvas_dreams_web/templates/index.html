@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Dreams - Interactive Art Creation</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Canvas Dreams</h1>
+            <h3>Interactive Art Creation</h3>
+            
+            <div class="section">
+                <h2>Drawing Modes</h2>
+                <button id="drawMode" class="mode-btn active">Standard Drawing (1)</button>
+                <button id="sprayMode" class="mode-btn">Spray Paint (2)</button>
+                <button id="kaleidoscopeMode" class="mode-btn">Kaleidoscope (3)</button>
+                <button id="gravityMode" class="mode-btn">Gravity (4)</button>
+            </div>
+            
+            <div class="section">
+                <h2>Tools</h2>
+                <button id="clearCanvas" class="tool-btn">Clear Canvas (C)</button>
+                <button id="saveArtwork" class="tool-btn">Save Artwork (S)</button>
+                <button id="toggleBackground" class="tool-btn">Toggle Background (B)</button>
+                <button id="helpBtn" class="tool-btn">Help (H)</button>
+            </div>
+            
+            <div class="section">
+                <h2>Brush Size: <span id="brushSizeValue">15</span></h2>
+                <div class="size-controls">
+                    <button id="decreaseSize" class="size-btn">-</button>
+                    <button id="increaseSize" class="size-btn">+</button>
+                </div>
+            </div>
+            
+            <div class="section" id="symmetrySection">
+                <h2>Symmetry: <span id="symmetryValue">8</span></h2>
+                <div class="size-controls">
+                    <button id="decreaseSymmetry" class="size-btn">-</button>
+                    <button id="increaseSymmetry" class="size-btn">+</button>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Current Mode: <span id="currentMode">Draw</span></h2>
+            </div>
+        </div>
+        
+        <div class="main-area">
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+        
+        <div class="footer">
+            <div class="color-palette" id="colorPalette"></div>
+            <div id="saveMessage"></div>
+        </div>
+    </div>
+    
+    <div id="helpOverlay" class="help-overlay hidden">
+        <div class="help-content">
+            <h1>Canvas Dreams - Help</h1>
+            <div class="help-section">
+                <h2>Mouse Controls:</h2>
+                <p>- Left Mouse Button: Draw on canvas</p>
+                <p>- Right Mouse Button: Change to random color</p>
+                <p>- Click on Color Palette: Select specific colors</p>
+                <p>- Click on Buttons: Activate various functions</p>
+            </div>
+            <div class="help-section">
+                <h2>Keyboard Controls:</h2>
+                <p>- 1-4 Keys: Switch between drawing modes</p>
+                <p>- Up/Down Arrows: Increase/decrease brush size</p>
+                <p>- Left/Right Arrows: Adjust symmetry (in kaleidoscope mode)</p>
+                <p>- C Key: Clear canvas</p>
+                <p>- S Key: Save artwork as PNG</p>
+                <p>- B Key: Toggle background (black/white)</p>
+                <p>- H Key: Show/hide this help</p>
+            </div>
+            <div class="help-section">
+                <h2>Drawing Modes:</h2>
+                <p>- Standard: Classic brush drawing</p>
+                <p>- Spray: Create particle spray effects</p>
+                <p>- Kaleidoscope: Create symmetrical patterns</p>
+                <p>- Gravity: Create fountain-like particle effects</p>
+            </div>
+            <p class="help-close">Click anywhere or press H to close this help</p>
+        </div>
+    </div>
+    
+    <script src="/static/js/canvas_dreams.js"></script>
+</body>
+</html>

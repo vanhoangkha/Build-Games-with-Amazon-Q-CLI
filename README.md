@@ -1,6 +1,6 @@
 # Building Games with Amazon Q CLI
 
-This project demonstrates how Amazon Q CLI can help you build creative applications like games. In this example, we've created "Canvas Dreams" - an interactive art creation game using Pygame.
+This project demonstrates how Amazon Q CLI can help you build creative applications like games. In this example, we've created "Canvas Dreams" - an interactive art creation game using Pygame, with both desktop and web versions.
 
 ![Canvas Dreams](https://placeholder-for-screenshot.png)
 
@@ -9,11 +9,12 @@ This project demonstrates how Amazon Q CLI can help you build creative applicati
 Amazon Q CLI assisted in:
 
 1. **Project Setup**: Created the project structure and virtual environment
-2. **Dependency Management**: Installed and configured Pygame
+2. **Dependency Management**: Installed and configured Pygame and Flask
 3. **Code Generation**: Created the game code with multiple drawing modes and features
 4. **UI Design**: Built an intuitive user interface with sidebar, buttons, and controls
-5. **Documentation**: Generated comprehensive README files and instructions
-6. **Troubleshooting**: Fixed audio initialization issues for environments without sound hardware
+5. **Web Conversion**: Transformed the Pygame application into a web application
+6. **Documentation**: Generated comprehensive README files and instructions
+7. **Troubleshooting**: Fixed audio initialization issues for environments without sound hardware
 
 ## Canvas Dreams Game
 
@@ -26,6 +27,7 @@ Canvas Dreams is an interactive art creation game with a modern UI that allows u
 - **Interactive Controls**: Both button-based UI and keyboard shortcuts
 - **Help System**: Built-in help overlay with instructions
 - **Artwork Saving**: Save your creations as PNG files
+- **Multiple Platforms**: Available as both desktop application and web application
 
 ### Technical Highlights
 - Particle systems with physics simulation
@@ -33,12 +35,14 @@ Canvas Dreams is an interactive art creation game with a modern UI that allows u
 - Interactive UI with button components
 - Color manipulation and blending effects
 - Canvas isolation for clean exports
+- Web implementation using HTML5 Canvas and JavaScript
 
 ## Installation
 
 ### Prerequisites
 - Python 3.x
-- Pygame library
+- Pygame library (for desktop version)
+- Flask (for web version)
 
 ### Setup
 1. Clone this repository:
@@ -50,18 +54,33 @@ Canvas Dreams is an interactive art creation game with a modern UI that allows u
    cd Build-Games-with-Amazon-Q-CLI
    python3 -m venv venv
    source venv/bin/activate
-   pip install pygame
+   pip install pygame flask
    ```
 
 ## Running the Game
 
-To run the game:
+### Desktop Version
+To run the desktop version:
 
 1. Navigate to the canvas_dreams directory
 2. Execute the run.sh script:
    ```
    cd canvas_dreams
    ./run.sh
+   ```
+
+### Web Version
+To run the web version:
+
+1. Navigate to the canvas_dreams_web directory
+2. Execute the run.sh script:
+   ```
+   cd canvas_dreams_web
+   ./run.sh
+   ```
+3. Open your web browser and go to:
+   ```
+   http://localhost:1313
    ```
 
 ## Game Controls
@@ -97,8 +116,9 @@ This project showcases how Amazon Q CLI can assist in creative application devel
 1. **Initial Concept**: Started with a basic idea for an art creation game
 2. **Core Implementation**: Built the fundamental drawing mechanics and particle systems
 3. **UI Enhancement**: Added a professional interface with controls and visual feedback
-4. **Refinement**: Fixed issues and optimized for different environments
-5. **Documentation**: Created comprehensive guides and instructions
+4. **Web Adaptation**: Converted the Pygame application to a web-based version
+5. **Refinement**: Fixed issues and optimized for different environments
+6. **Documentation**: Created comprehensive guides and instructions
 
 ## Future Enhancements
 
@@ -108,6 +128,7 @@ Potential features for future development:
 - Layer system for complex artwork
 - Collaborative drawing features
 - Custom brush shapes and patterns
+- Mobile-friendly controls for the web version
 
 ## Enjoy Creating!
 
